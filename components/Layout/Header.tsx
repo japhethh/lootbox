@@ -6,7 +6,7 @@ const Headers = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full bg-[#1E1E1E] py-4 px-4 md:px-16">
+    <header className="sticky top-0 z-50 w-full bg-transparent py-4 px-4 md:px-16">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center z-20">

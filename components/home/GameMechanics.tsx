@@ -2,11 +2,11 @@ import Image from "next/image";
 
 const GameMechanics = () => {
   return (
-    <div className="gradient-bg text-white py-10">
+    <div className="gradient-bg text-white">
       {/* Assuming 'gradient-bg' is a custom class defined in your global CSS */}
       <div className="max-w-7xl mx-auto px-4">
         <div className="py-10 max-w-2xl mx-auto px-4">
-          <div className="flex flex-row sm:flex-row justify-around items-center gap-4 sm:gap-8 py-8 text-center w-full overflow-x-auto">
+          <div className="flex flex-row sm:flex-row justify-around items-center gap-4 sm:gap-8 text-center w-full overflow-x-auto">
             <div className="flex-1 flex flex-col gap-2 min-w-[100px]">
               <p className="text-xs font-medium text-neutral-300">Up To More Than</p>
               <h1 className="font-bold text-2xl sm:text-3xl text-yellow-400">1M+</h1>

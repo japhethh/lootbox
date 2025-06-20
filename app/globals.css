@@ -11,12 +11,18 @@
   }
 }
 
+body {
+  background-color: #151515;
+}
 @layer components {
   .height {
     @apply sm:min-h-[400px] md:min-h-[600px] lg:min-h-[800px];
   }
   .text-mustard {
     @apply text-[#FFBA08];
+  }
+  .gradient-bg-secondary {
+    @apply bg-[#151515];
   }
   .bg-mustard {
     @apply bg-[#FFBA08];
@@ -27,26 +33,32 @@
   .gradient-bg {
     @apply bg-[#1E1E1E];
   }
+
+  .bg-secondary-primary {
+    @apply bg-[#1A1A1A];
+  }
+  .text-secondary-primary {
+    @apply text-[#1A1A1A];
+  }
 }
 
 @theme inline {
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
   @keyframes marquee {
-  from {
-    transform: translateX(0);
+    from {
+      transform: translateX(0);
     }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
     }
   }
   @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
+    from {
+      transform: translateY(0);
     }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
     }
   }
 }
-
