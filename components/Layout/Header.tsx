@@ -4,9 +4,8 @@ import { Button } from "../ui/button";
 
 const Headers = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
   return (
-    <header className="sticky top-0 z-50 w-full bg-transparent py-4 px-4 md:px-16">
+    <header className="fixed top-0 z-50 w-full gradient-bg py-3 px-4 md:px-16 transition-all duration-300 backdrop-blur-sm bg-opacity-90">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center z-20">

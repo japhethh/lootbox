@@ -5,7 +5,7 @@ const GameMechanics = () => {
     <div className="gradient-bg text-white">
       {/* Assuming 'gradient-bg' is a custom class defined in your global CSS */}
       <div className="max-w-7xl mx-auto px-4">
-        <div className="py-10 max-w-2xl mx-auto px-4">
+        {/* <div className="py-10 max-w-2xl mx-auto px-4">
           <div className="flex flex-row sm:flex-row justify-around items-center gap-4 sm:gap-8 text-center w-full overflow-x-auto">
             <div className="flex-1 flex flex-col gap-2 min-w-[100px]">
               <p className="text-xs font-medium text-neutral-300">Up To More Than</p>
@@ -23,7 +23,7 @@ const GameMechanics = () => {
               <p className="text-xs font-medium text-neutral-300">New Games</p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="py-5">
           {/* Responsive grid: stack on mobile, grid on md+ */}
