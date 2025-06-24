@@ -18,6 +18,8 @@ export default function DoorsSection() {
   const rightDoorRef = useRef<HTMLDivElement>(null);
   const boxRef = useRef<HTMLDivElement>(null);
 
+  const upMore = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const section = sectionRef.current;
     const stickyContent = stickyContainerRef.current;
@@ -34,55 +36,28 @@ export default function DoorsSection() {
         start: "top top",
         end: () => `+=${section.offsetHeight - window.innerHeight}`,
         scrub: 1,
+
         // markers: true,
         anticipatePin: 1,
       },
-    }); // Create a separate floating animation for the box
+    });
     const boxAnimation = gsap.timeline({
       repeat: -1,
       yoyo: true,
       repeatDelay: 0.5,
     });
 
-    // gsap.fromTo(
-    //   box,
-    //   {
-    //     y: -500,
-    //   },
-    //   {
-    //     y: 0,
-    //     ease: "power.inOut",
-    //   }
-    // );
-    // Continuous floating animation
     boxAnimation
       .to(box, {
-        y: 0,
         rotation: 0,
         duration: 1.5,
         ease: "power1.inOut",
       })
       .to(box, {
-        y: -32,
         rotation: -30,
         duration: 1.5,
         ease: "power1.inOut",
       });
-
-    // tl.fromTo(
-    //   box,
-    //   {
-    //     opacity: 0,
-    //     scale: 0.5,
-    //   },
-    //   {
-    //     opacity: 1,
-    //     scale: 1,
-    //     ease: "power2.out",
-    //     duration: 2,
-    //   },
-    //   "open+=0.1"
-    // );
 
     tl.to(leftDoor, { xPercent: -100, ease: "power1.inOut" }, "open")
       .to(rightDoor, { xPercent: 100, ease: "power1.inOut" }, "open")
@@ -90,11 +65,32 @@ export default function DoorsSection() {
       .fromTo(
         box,
         { y: -500, opacity: 0 },
-        { y: 0, opacity: 1, ease: "power.inOut", duration: 2 },
+        { y: 0, opacity: 1, ease: "power.inOut", duration: 3 },
         "doorsOpened"
       );
 
     tl.to({}, { duration: 1 });
+
+    if (upMore.current) {
+      gsap.fromTo(
+        upMore.current,
+        {
+          opacity: 0,
+          y: 300,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          ease: "power.in",
+          duration: 1,
+          scrollTrigger: {
+            trigger: upMore.current,
+            start: "top 90%",
+            scrub: 1,
+          },
+        }
+      );
+    }
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -106,103 +102,103 @@ export default function DoorsSection() {
     <ParallaxProvider>
       <div
         ref={sectionRef}
-        className="relative gradient-bg"
-        style={{ height: "210vh" }}
+        className="relative bg-[#1B1B1B]"
+        style={{ height: "250vh" }}
       >
         <div
           ref={stickyContainerRef}
-          className="height w-full top-0 flex flex-col pt-30 pb-45 lg:min-h-[85vh] overflow-hidden text-center"
+          className="w-full h-screen top-0 flex flex-col pt-30  overflow-hidden text-center"
         >
           {/* Content that gets revealed (z-index 0) */}
-          <div className="z-0">
-            <div className="max-w-xl mx-auto">
-              <div className="flex justify-center items-center">
-                <div>
-                  <Image
-                    src="/home/hero/lootbox-logo.png"
-                    alt="image"
-                    width={300}
-                    height={0}
-                  />
-                </div>
-              </div>
-              <p className="text-lg text-white mt-4">
-                Bagsakan brings the excitement of the casino straight to your
-                screen. Safe, secure, and always ready when you are.
-              </p>
-              <div className="flex flex-row gap-3 justify-center items-center mt-6">
-                <Button className="bg-mustard text-black cursor-pointer font-semibold rounded-full px-5 py-5 text-lg bg-white transition">
-                  Watch Streams
-                </Button>
-                <Button className="bg-mustard text-white cursor-pointer font-semibold rounded-full px-5 py-5 text-lg bg-mustard transition">
-                  Explore Games
-                </Button>
-              </div>
-              {/* Box with GSAP animation */}
-              <div className="flex justify-center items-center mt-10">
-                <div
-                  ref={boxRef}
-                  className="transform-gpu relative will-change-transform  "
-                >
-                  <div className="relative">
+          <div className="z-0 flex flex-col justify-between items-center h-screen">
+            <div className="max-w-7xl flex flex-col justify-between mx-auto">
+              <div className="max-w-2xl mx-auto">
+                <div className="flex relative  justify-center items-center">
+                  <div className="relative w-full max-w-[200px] min-w-[120px] aspect-[5/2]">
                     <Image
-                      src="/home/hero/box-rotate.png"
-                      alt="3D Lootbox"
-                      width={250}
-                      height={250}
-                      className="filter drop-shadow-lg"
+                      src="/home/hero/lootbox-logo.png"
+                      alt="Lootbox Logo"
+                      fill
+                      className="object-contain"
                       priority
                     />
-                    {/* Add optional glow effect */}
-                    <div className="absolute -inset-2 bg-purple-500/20 rounded-full blur-xl -z-10 animate-pulse"></div>
                   </div>
                 </div>
-              </div>
-              <div>
-                <div className="py-10 max-w-2xl mx-auto px-4">
-                  <div className="flex flex-row sm:flex-row justify-around items-center gap-4 sm:gap-8 text-center w-full overflow-x-auto">
-                    <div className="flex-1 flex flex-col gap-2 min-w-[100px]">
-                      <p className="text-xs font-medium text-neutral-300">
-                        Up To More Than
-                      </p>
-                      <h1 className="font-bold text-2xl sm:text-3xl text-yellow-400">
-                        1M+
-                      </h1>
-                      <p className="text-xs font-medium text-neutral-300">
-                        Active Users
-                      </p>
-                    </div>
-                    <div className="flex-1 flex flex-col gap-2 min-w-[100px]">
-                      <p className="text-xs font-medium text-neutral-300">
-                        More Future
-                      </p>
-                      <h1 className="font-bold text-2xl sm:text-3xl text-purple-400">
-                        100+
-                      </h1>
-                      <p className="text-xs font-medium text-neutral-300">
-                        Streamers
-                      </p>
-                    </div>
-                    <div className="flex-1 flex flex-col gap-2 min-w-[100px]">
-                      <p className="text-xs font-medium text-neutral-300">
-                        Dropping Weekly
-                      </p>
-                      <h1 className="font-bold text-2xl sm:text-3xl text-yellow-400">
-                        1M+
-                      </h1>
-                      <p className="text-xs font-medium text-neutral-300">
-                        New Games
-                      </p>
+                <p className="text-lg text-white mt-4">
+                  Bagsakan brings the excitement of the casino straight to your
+                  screen. Safe, secure, and always ready when you are.
+                </p>
+                <div className="flex flex-row gap-3 justify-center items-center mt-6">
+                  <Button className="bg-mustard text-black cursor-pointer font-semibold rounded-full px-5 py-5 text-lg bg-white transition">
+                    Watch Streams
+                  </Button>
+                  <Button className="bg-mustard text-white cursor-pointer font-semibold rounded-full px-5 py-5 text-lg bg-mustard transition">
+                    Explore Games
+                  </Button>
+                </div>
+                {/* Box with GSAP animation */}
+                <div className="flex justify-center items-center mt-5">
+                  <div
+                    ref={boxRef}
+                    className="transform-gpu relative will-change-transform  "
+                  >
+                    <div className="relative">
+                      <div className="w-[230px] h-[230px]">
+                        <Image
+                          src="/home/hero/box-rotate.png"
+                          alt="3D Lootbox"
+                          fill
+                          className="filter drop-shadow-lg "
+                          priority
+                        />
+                        {/* Add optional glow effect */}
+                        <div className="absolute -inset-2 bg-purple-500/20 rounded-full blur-xl -z-10 animate-pulse"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div ref={upMore} className="w-full rounded-t-2xl bg-[#1E1E1E]">
+              <div className="py-10 max-w-8xl mx-auto px-4">
+                <div className="flex flex-row sm:flex-row justify-around items-center gap-4 sm:gap-8 text-center w-full overflow-x-auto">
+                  <div className="flex-1 flex flex-col gap-2 min-w-[100px]">
+                    <p className="text-xs font-medium text-neutral-300">
+                      Up To More Than
+                    </p>
+                    <h1 className="font-bold text-2xl sm:text-3xl text-yellow-400">
+                      1M+
+                    </h1>
+                    <p className="text-xs font-medium text-neutral-300">
+                      Active Users
+                    </p>
+                  </div>
+                  <div className="flex-1 flex flex-col gap-2 min-w-[100px]">
+                    <p className="text-xs font-medium text-neutral-300">
+                      More Future
+                    </p>
+                    <h1 className="font-bold text-2xl sm:text-3xl text-purple-400">
+                      100+
+                    </h1>
+                    <p className="text-xs font-medium text-neutral-300">
+                      Streamers
+                    </p>
+                  </div>
+                  <div className="flex-1 flex flex-col gap-2 min-w-[100px]">
+                    <p className="text-xs font-medium text-neutral-300">
+                      Dropping Weekly
+                    </p>
+                    <h1 className="font-bold text-2xl sm:text-3xl text-yellow-400">
+                      1M+
+                    </h1>
+                    <p className="text-xs font-medium text-neutral-300">
+                      New Games
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-
-        <div>
-
-        </div>
 
           {/* Left Door (z-index 10) */}
           <div

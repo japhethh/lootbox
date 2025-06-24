@@ -22,7 +22,7 @@ const page = () => {
       <ExclusiveReward />
       <WhatIsNew />
       <Cta />
-    </div>
+      </div>
   );
 };
 
