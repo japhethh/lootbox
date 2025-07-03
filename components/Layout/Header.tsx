@@ -75,11 +75,12 @@ const Headers = () => {
             {/* Play Now Button for mobile */}
             <li className="block md:hidden mt-4">
               <Button
-                className="bg-[#FFBA08] text-black font-bold rounded-none px-8 py-3 border-2 border-[#FFBA08] relative group text-base w-full"
+                className="bg-[#FFBA08] cursor-pointer text-black font-bold rounded-none px-8 py-3 border-2 border-[#FFBA08] relative group text-base w-full"
                 style={{
                   clipPath:
                     "polygon(10px 0, 100% 0, 100% 70%, calc(100% - 10px) 100%, 0 100%, 0 10px)",
                 }}
+                onClick={() => window.open("https://lootbax.socia-dev.com/login", "_blank")}
               >
                 PLAY NOW
               </Button>
@@ -89,11 +90,12 @@ const Headers = () => {
         {/* Play Now Button for desktop */}
         <div className="hidden md:flex items-center">
           <Button
-            className="bg-[#FFBA08] text-black font-bold rounded-none px-8 py-3 border-2 border-[#FFBA08] relative group text-base"
+            className="bg-[#FFBA08] cursor-pointer text-black font-bold rounded-none px-8 py-3 border-2 border-[#FFBA08] relative group text-base"
             style={{
               clipPath:
                 "polygon(10px 0, 100% 0, 100% 70%, calc(100% - 10px) 100%, 0 100%, 0 10px)",
             }}
+            onClick={() => window.open("https://lootbax.socia-dev.com/login", "_blank")}
           >
             PLAY NOW
           </Button>

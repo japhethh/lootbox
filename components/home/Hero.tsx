@@ -274,7 +274,7 @@ const Hero = () => {
       </div>
 
       <div ref={getStarted}>
-        <Button className="bg-mustard text-black cursor-pointer font-semibold rounded-full px-5 py-6 text-lg hover:bg-[#e6a807] transition">
+        <Button   onClick={() => window.open("https://lootbax.socia-dev.com/register", "_blank")} className="bg-mustard text-black cursor-pointer font-semibold rounded-full px-5 py-6 text-lg hover:bg-[#e6a807] transition">
           Get Started →
         </Button>
       </div>
