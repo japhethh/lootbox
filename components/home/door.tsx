@@ -114,7 +114,7 @@ export default function DoorsSection() {
             <div className="max-w-7xl flex flex-col justify-between mx-auto">
               <div className="max-w-2xl mx-auto">
                 <div className="flex relative  justify-center items-center">
-                  <div className="relative w-full max-w-[200px] min-w-[120px] aspect-[5/2]">
+                  <div className="relative w-full max-w-[400px] min-w-[200px] aspect-[5/2]">
                     <Image
                       src="/home/hero/lootbox-logo.png"
                       alt="Lootbox Logo"
@@ -140,10 +140,10 @@ export default function DoorsSection() {
                 <div className="flex justify-center items-center mt-5">
                   <div
                     ref={boxRef}
-                    className="transform-gpu relative will-change-transform  "
+                    className="transform-gpu relative will-change-transform"
                   >
                     <div className="relative">
-                      <div className="w-[230px] h-[230px]">
+                      <div className="max-md:w-[230px] max-md:h-[230px] md:w-[230px] md:h-[230px]  xl:w-[230px] xl:h-[330px] 2xl:w-[330px] 2xl:h-[330px]">
                         <Image
                           src="/home/hero/box-rotate.png"
                           alt="3D Lootbox"
@@ -159,8 +159,11 @@ export default function DoorsSection() {
                 </div>
               </div>
             </div>
-            <div ref={upMore} className="w-full rounded-t-2xl bg-[#1E1E1E]">
-              <div className="py-10 max-w-8xl mx-auto px-4">
+            <div
+              ref={upMore}
+              className="w-full container mx-auto rounded-t-2xl bg-[#1E1E1E]"
+            >
+              <div className="py-10 md:py-20 max-w-3xl mx-auto px-4">
                 <div className="flex flex-row sm:flex-row justify-around items-center gap-4 sm:gap-8 text-center w-full overflow-x-auto">
                   <div className="flex-1 flex flex-col gap-2 min-w-[100px]">
                     <p className="text-xs font-medium text-neutral-300">
