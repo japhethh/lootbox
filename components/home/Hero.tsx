@@ -214,7 +214,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="absolute z-10 pt-30 text-white w-full flex flex-col items-center min-h-[100vh] py-16">
+    <section className="absolute z-10 pt-50 md:px-4 px-2  text-white w-full flex flex-col items-center min-h-[100vh] py-16">
       {/* Decorative sparkles */}
       <span className="absolute left-[20%] top-[20%] text-3xl">✦</span>
       <span className="absolute right-[20%] top-[18%] text-3xl">✦</span>
@@ -242,7 +242,7 @@ const Hero = () => {
 
       {/* Main headline */}
       <div className="flex flex-col mt-3 gap-3 items-center text-center mb-2">
-        <div className="text-[2.5rem] sm:text-sm md:text-[5rem] flex flex-row gap-2 font-bold leading-none">
+        <div className="text-[2rem] sm:text-sm md:text-[5rem] flex flex-row gap-2 font-bold leading-none">
           <div ref={streamers} className="text-[#9360E3]">
             <span>Streamers</span>
           </div>
@@ -279,7 +279,7 @@ const Hero = () => {
         </Button>
       </div>
 
-      <div ref={playStream} className="mt-24">
+      <div ref={playStream} className="md:mt-55 mt-35">
         <div className="flex uppercase flex-row gap-5 text-gray-700 md:text-2xl lg:text-3xl">
           <h1>Play</h1>
           <h1>stream</h1>

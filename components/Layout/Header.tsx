@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 const Headers = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <header className="fixed top-0 z-50 w-full gradient-bg py-3 px-4 md:px-16 transition-all duration-300 backdrop-blur-sm bg-opacity-90">
+    <header className="fixed top-0 z-50 w-full  py-3 px-4 md:px-16 transition-all duration-300 backdrop-blur-sm bg-opacity-90">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center z-20">
@@ -47,11 +47,11 @@ const Headers = () => {
             md:static md:bg-transparent md:flex md:flex-row md:items-center md:gap-0
           `}
         >
-          <ul className="flex flex-col md:flex-row bg-[#232323] md:rounded-full px-6 py-6 md:py-3 gap-6 md:gap-6 md:px-6">
+          <ul className="flex flex-col md:flex-row bg-[#232323] md:rounded-full px-6 py-6 md:py-2 gap-6 md:gap-6 md:px-2">
             <li>
               <a
                 href="#"
-                className="text-white font-medium px-3 py-2 md:py-1 rounded-full bg-[#353535] shadow transition block text-center"
+                className="text-white font-regular px-3 py-2 md:py-1 rounded-full bg-[#353535] shadow transition block text-center"
               >
                 About
               </a>
@@ -59,7 +59,7 @@ const Headers = () => {
             <li>
               <a
                 href="#"
-                className="text-white font-medium px-3 py-2 md:py-1 rounded-full hover:bg-[#353535] transition block text-center"
+                className="text-white font-regular px-3 py-2 md:py-1 rounded-full hover:bg-[#353535] transition block text-center"
               >
                 Streamers
               </a>
@@ -67,7 +67,7 @@ const Headers = () => {
             <li>
               <a
                 href="#"
-                className="text-white font-medium px-3 py-2 md:py-1 rounded-full hover:bg-[#353535] transition block text-center"
+                className="text-white font-regular px-3 py-2 md:py-1 rounded-full hover:bg-[#353535] transition block text-center"
               >
                 Community
               </a>
