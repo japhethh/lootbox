@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#1E1E1E] text-white py-30 px-4 md:px-8">
+    <footer className="w-full bg-[#1E1E1E] text-white pb-30 px-4 md:px-8">
       <div className="max-w-7xl mx-auto flex flex-col gap-10 md:flex-row border-t border-[#262626] pt-20 md:items-start md:gap-0 justify-between">
         {/* Logo */}
         <div className="flex items-start justify-center md:justify-start mb-6 mr-0 md:mr-20 md:mb-0">

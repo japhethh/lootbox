@@ -118,14 +118,14 @@ export default function DoorsSection() {
       >
         <div
           ref={stickyContainerRef}
-          className="w-full h-screen top-0 flex flex-col pt-30  overflow-hidden text-center"
+          className="w-full h-screen top-0 flex flex-col   overflow-hidden text-center"
         >
           {/* Content that gets revealed (z-index 0) */}
-          <div className="z-0 flex flex-col justify-between items-center h-screen">
-            <div className="max-w-7xl flex flex-col justify-center mx-auto">
+          <div className="z-0 flex flex-col justify-between mt-15 items-center h-screen">
+            <div className="max-w-7xl flex-1 flex flex-col justify-center mx-auto">
               <div className="max-w-2xl mx-auto">
                 <div className="flex relative justify-center items-center">
-                  <div className="relative w-full md:max-w-[400px] md:min-w-[200px] max-w-[300px] min-w-[200px]  aspect-[5/2]">
+                  <div className="relative w-full md:max-w-[300px] aspect-[5/2]">
                     <Image
                       src="/home/hero/lootbox-logo.png"
                       alt="Lootbox Logo"
@@ -135,10 +135,12 @@ export default function DoorsSection() {
                     />
                   </div>
                 </div>
-                <p className="text-lg text-white mt-4">
-                  Bagsakan brings the excitement of the casino straight to your
-                  screen. Safe, secure, and always ready when you are.
-                </p>
+                <div className="max-w-md mx-auto">
+                  <p className="text-md font-sans text-white mt-1">
+                    Bagsakan brings the excitement of the casino straight to
+                    your screen. Safe, secure, and always ready when you are.
+                  </p>
+                </div>
                 <div className="flex flex-row gap-3 justify-center items-center mt-6">
                   <Button className="bg-mustard text-black cursor-pointer font-semibold rounded-full px-5 py-5 text-lg bg-white transition">
                     Watch Streams
@@ -148,14 +150,17 @@ export default function DoorsSection() {
                   </Button>
                 </div>
 
-                {/* Box with GSAP animation */}
-                <div className="flex justify-center items-center mt-5">
+               <div className="flex justify-center items-center h-[40vh] w-full">
+                 {/* Box with GSAP animation */}
+                <div className="flex justify-center items-center my-2">
                   <div
                     ref={boxRef}
                     className="transform-gpu relative will-change-transform"
                   >
                     <div className="relative">
-                      <div className="w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] md:w-[250px] md:h-[250px] lg:w-[280px] lg:h-[280px] xl:w-[320px] xl:h-[320px] 2xl:w-[280px] 2xl:h-[280px]">
+                      {/* Laptops (1536px) */}
+                      {/* Desktops (1920px) */}
+                      <div className="w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] md:w-[250px] md:h-[250px] lg:w-[280px] lg:h-[280px] xl:w-[320px] xl:h-[320px] 2xl:w-[260px] 2xl:h-[260px]  3xl:w-[280px] 3xl:h-[280px]">
                         <Image
                           src="/home/hero/box-rotate.png"
                           alt="3D Lootbox"
@@ -163,19 +168,21 @@ export default function DoorsSection() {
                           className="filter drop-shadow-lg object-contain"
                           priority
                         />
-                        {/* Add optional glow effect */}
+                        {/* Glow effect */}
                         <div className="absolute -inset-2 bg-purple-500/20 rounded-full blur-xl -z-10 animate-pulse"></div>
                       </div>
                     </div>
                   </div>
                 </div>
+               </div>
               </div>
             </div>
+            
             <div
               ref={upMore}
-              className="w-full container mx-auto rounded-t-2xl bg-[#1E1E1E]"
+              className="w-full container h-[22vh] flex justify-center items-center rounded-t-2xl bg-[#1E1E1E]"
             >
-              <div className="py-8 md:py-20 max-w-4xl mx-auto px-4">
+              <div className="py-8 md:py-10 max-w-xl w-full mx-auto px-4">
                 <div className="flex flex-row justify-around items-center gap-4 sm:gap-6 md:gap-8 text-center w-full">
                   <div className="flex-1 flex flex-col gap-1 sm:gap-2 min-w-[80px] max-w-[120px] sm:max-w-none">
                     <p className="text-[10px] sm:text-xs font-medium text-neutral-300 leading-tight">

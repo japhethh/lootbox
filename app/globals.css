@@ -62,3 +62,58 @@ body {
     }
   }
 }
+
+
+/* Base size (mobile) */
+.responsive-lootbox {
+  width: 180px;
+  height: 180px;
+}
+
+/* Small (sm) */
+@media (min-width: 640px) {
+  .responsive-lootbox {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* Medium (md) */
+@media (min-width: 768px) {
+  .responsive-lootbox {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Large (lg) */
+@media (min-width: 1024px) {
+  .responsive-lootbox {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) {
+  .responsive-lootbox {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+/* 2XL (1536px - Laptops) */
+@media (min-width: 1536px) {
+  .responsive-lootbox {
+    width: 190px;
+    height: 190px;
+  }
+}
+
+/* 3XL (1920px - Desktops) */
+@media (min-width: 1920px) {
+  .responsive-lootbox {
+    width: 380px;
+    height: 380px;
+  }
+}

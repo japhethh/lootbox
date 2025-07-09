@@ -196,7 +196,7 @@ const Hero = () => {
           y: 200,
           ease: "power.out",
           scrollTrigger: {
-            start: "top 60%",
+            start: "top 40%",
             trigger: getStarted.current,
             scrub: 1,
             onUpdate: (self) => {
@@ -214,12 +214,12 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="absolute z-10 pt-50 md:px-4 px-2  text-white w-full flex flex-col items-center min-h-[100vh] py-16">
+    <section className="absolute z-10 md:pt-30 md:px-4 px-2  text-white w-full flex flex-col items-center min-h-[100vh] py-16">
       {/* Decorative sparkles */}
       <span className="absolute left-[20%] top-[20%] text-3xl">✦</span>
       <span className="absolute right-[20%] top-[18%] text-3xl">✦</span>
       <span className="absolute left-[30%] bottom-[18%] text-3xl">✦</span>
-      <span className="absolute right-[30%] bottom-[20%] text-3xl">✦</span>
+      <span className="absolute right-[30%] bottom-[20%] te=-=xt-3xl">✦</span>
 
       {/* Powered by pill */}
       <div ref={powerbg} className="mb-6">
@@ -246,7 +246,7 @@ const Hero = () => {
           <div ref={streamers} className="text-[#9360E3]">
             <span>Streamers</span>
           </div>
-          <div ref={watched} className="text-white">
+          <div ref={watched} className="text-white">  
             <span>, Watched</span>
           </div>
         </div>
@@ -274,7 +274,7 @@ const Hero = () => {
       </div>
 
       <div ref={getStarted}>
-        <Button   onClick={() => window.open("https://lootbax.socia-dev.com/register", "_blank")} className="bg-mustard text-black cursor-pointer font-semibold rounded-full px-5 py-6 text-lg hover:bg-[#e6a807] transition">
+        <Button   onClick={() => window.open("https://lootbax.socia-dev.com/register", "_blank")} className="bg-mustard text-black cursor-pointer m-0 font-semibold rounded-full px-5 py-6 text-lg hover:bg-[#e6a807] ">
           Get Started →
         </Button>
       </div>
