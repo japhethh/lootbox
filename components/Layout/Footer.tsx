@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="w-full md:flex-[2] grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
           <div>
             <h4 className="font-semibold mb-3 text-sm md:text-base">Quick Links</h4>
-            <ul className="space-y-2 text-xs md:text-sm text-gray-200">
+            <ul className="space-y-5 text-xs md:text-sm text-gray-200">
               <li>
                 <a href="#" className="hover:text-[#FFBA08] transition">
                   Home
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
           <div>
             <h4 className="font-semibold mb-3 text-sm md:text-base">Helpful Links</h4>
-            <ul className="space-y-2 text-xs md:text-sm text-gray-200">
+            <ul className="space-y-5 text-xs md:text-sm text-gray-200">
               <li>
                 <a href="#" className="hover:text-[#FFBA08] transition">
                   Help
@@ -66,7 +66,7 @@ const Footer = () => {
           </div>
           <div className="col-span-2 md:col-span-1">
             <h4 className="font-semibold mb-3 text-sm md:text-base">Other links</h4>
-            <ul className="space-y-2 text-xs md:text-sm text-gray-200">
+            <ul className="space-y-5 text-xs md:text-sm text-gray-200">
               <li>
                 <a href="#" className="hover:text-[#FFBA08] transition">
                   Terms &amp; Condition

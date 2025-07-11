@@ -246,7 +246,7 @@ const Hero = () => {
           <div ref={streamers} className="text-[#9360E3]">
             <span>Streamers</span>
           </div>
-          <div ref={watched} className="text-white">  
+          <div ref={watched} className="text-white">
             <span>, Watched</span>
           </div>
         </div>
@@ -259,22 +259,27 @@ const Hero = () => {
             className="text-transparent font-bold"
             style={{ WebkitTextStroke: "1px #FFBA08", color: "transparent" }}
           >
-            Billions
+            Thousands
           </span>
         </div>
       </div>
 
       <div ref={newStreaming} className="mt-2 mb-6">
         <span className="text-base md:text-lg text-white/80">
-          New Streaming For Everyone.{" "}
+          New Streaming For Everyone.
           <a href="#" className="text-mustard font-semibold hover:underline">
-            Learn More
+            Learn More{" "}
           </a>
         </span>
       </div>
 
       <div ref={getStarted}>
-        <Button   onClick={() => window.open("https://lootbax.socia-dev.com/register", "_blank")} className="bg-mustard text-black cursor-pointer m-0 font-semibold rounded-full px-5 py-6 text-lg hover:bg-[#e6a807] ">
+        <Button
+          onClick={() =>
+            window.open("https://lootbax.socia-dev.com/register", "_blank")
+          }
+          className="bg-mustard text-black cursor-pointer m-0 font-semibold rounded-full px-5 py-6 text-lg hover:bg-[#e6a807] "
+        >
           Get Started →
         </Button>
       </div>

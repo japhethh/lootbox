@@ -5,7 +5,6 @@ const GameMechanics = () => {
     <div className="gradient-bg text-white">
       {/* Assuming 'gradient-bg' is a custom class defined in your global CSS */}
       <div className="max-w-7xl mx-auto px-4">
-    
         <div className="">
           {/* Responsive grid: stack on mobile, grid on md+ */}
           <div className="grid grid-cols-1 grid-rows-none gap-4 h-auto md:grid-cols-12 md:grid-rows-5 md:h-[400px]">

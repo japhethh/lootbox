@@ -150,34 +150,34 @@ export default function DoorsSection() {
                   </Button>
                 </div>
 
-               <div className="flex justify-center items-center h-[40vh] w-full">
-                 {/* Box with GSAP animation */}
-                <div className="flex justify-center items-center my-2">
-                  <div
-                    ref={boxRef}
-                    className="transform-gpu relative will-change-transform"
-                  >
-                    <div className="relative">
-                      {/* Laptops (1536px) */}
-                      {/* Desktops (1920px) */}
-                      <div className="w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] md:w-[250px] md:h-[250px] lg:w-[280px] lg:h-[280px] xl:w-[320px] xl:h-[320px] 2xl:w-[260px] 2xl:h-[260px]  3xl:w-[280px] 3xl:h-[280px]">
-                        <Image
-                          src="/home/hero/box-rotate.png"
-                          alt="3D Lootbox"
-                          fill
-                          className="filter drop-shadow-lg object-contain"
-                          priority
-                        />
-                        {/* Glow effect */}
-                        <div className="absolute -inset-2 bg-purple-500/20 rounded-full blur-xl -z-10 animate-pulse"></div>
+                <div className="flex justify-center items-center h-[40vh] w-full">
+                  {/* Box with GSAP animation */}
+                  <div className="flex justify-center items-center my-2">
+                    <div
+                      ref={boxRef}
+                      className="transform-gpu relative will-change-transform"
+                    >
+                      <div className="relative">
+                        {/* Laptops (1536px) */}
+                        {/* Desktops (1920px) */}
+                        <div className="w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] md:w-[250px] md:h-[250px] lg:w-[280px] lg:h-[280px] xl:w-[320px] xl:h-[320px] 2xl:w-[260px] 2xl:h-[260px]  3xl:w-[280px] 3xl:h-[280px]">
+                          <Image
+                            src="/home/hero/box-rotate.png"
+                            alt="3D Lootbox"
+                            fill
+                            className="filter drop-shadow-lg object-contain"
+                            priority
+                          />
+                          {/* Glow effect */}
+                          <div className="absolute -inset-2 bg-purple-500/20 rounded-full blur-xl -z-10 animate-pulse"></div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-               </div>
               </div>
             </div>
-            
+
             <div
               ref={upMore}
               className="w-full container h-[22vh] flex justify-center items-center rounded-t-2xl bg-[#1E1E1E]"

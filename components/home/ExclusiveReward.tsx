@@ -39,11 +39,11 @@ const ExclusiveReward = () => (
         Exclusive Rewards
       </h2>
       <p className="text-neutral-400 max-w-xs sm:max-w-2xl mx-auto text-xs sm:text-sm md:text-base">
-        LootBox is where the next generation don’t just watch—they
-        participate. It’s where your loyalty is recognized, your fandom
-        rewarded, and your time respected. We blend high-energy streaming,
-        interactive events, and a reward economy that turns viewers into
-        active players in the entertainment experience.
+        LootBox is where the next generation don’t just watch—they participate.
+        It’s where your loyalty is recognized, your fandom rewarded, and your
+        time respected. We blend high-energy streaming, interactive events, and
+        a reward economy that turns viewers into active players in the
+        entertainment experience.
       </p>
     </div>
 
